@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 public abstract class Conico : Figura {
-    private decimal _radio;
+    public decimal _radio {  get; set; }
 
 }
 // ---------------- Heredan de Conico ------------------------
-public class Circunsferencia : Conico
+public class Circunferencia : Conico
 {
     public override decimal CalcularPerimetro() {
         decimal numero = 0;
@@ -32,7 +32,7 @@ public class Circunsferencia : Conico
 public class Elipse : Conico
 {
 
-    private decimal _radioMayor;
+    public decimal _radioMayor {get;set;}
     public override decimal CalcularPerimetro()
     {
         decimal numero = 0;

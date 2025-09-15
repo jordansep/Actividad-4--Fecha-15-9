@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 public abstract class Poligono : Figura
 {
-    private decimal _ladoUno = 0;
-    private int _cantLados = 0;
+    public decimal _ladoUno {  get; set; }
+    public int _cantLados {  get; set; }
 
 }
 
@@ -24,7 +24,7 @@ public class Cuadrado : Poligono{
     }
 }
 public class Rectangulo : Poligono{
-    private decimal _lado2;
+    public decimal _lado2 {  get; set; }
     public override decimal CalcularPerimetro()
     {
         decimal numero = 0;
@@ -42,8 +42,8 @@ public class Rectangulo : Poligono{
  public abstract class Triangulo : Poligono
 {
 
-    private decimal Base;
-    private decimal Altura;
+    public decimal Base{get; set;}
+    public decimal Altura { get; set; }
     public override decimal CalcularPerimetro()
     {
         decimal numero = 0;
@@ -69,7 +69,7 @@ public class Equilatero : Triangulo {
     }
 }
 public class Isosceles : Triangulo{ 
-    private decimal _lado2;
+    public decimal _lado2 { get; set; }
     public override decimal CalcularPerimetro()
     {
         decimal numero = 0;

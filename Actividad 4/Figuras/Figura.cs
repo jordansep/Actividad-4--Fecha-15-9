@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public abstract class Figura
 {
-    private string _nombre;
+    public string _nombre {  get; set; }
     public abstract decimal CalcularPerimetro();
     public abstract decimal CalcularArea();
 }
